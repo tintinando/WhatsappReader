@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="module" src="/src/main.ts"></script>
+    <title>whatsappreader</title>
+  </head>
+  <body class="dark:bg-gray-900">
+    <header class="flex flex-col items-center mt-6 w-full">
+      <h1 class="text-3xl font-bold mb-5 dark:text-amber-100">
+        Whatsapp Reader
+      </h1>
+      <nav class="flex flex-row w-full p-3 justify-between">
+        <a href="#" id="btn-inicio" class="dark:text-amber-100">Inicio</a>
+        <div id="search-bar" class="hidden">
+          <input
+            type="text"
+            placeholder="Buscar..."
+            class="border-2 border-blue-400 rounded-md h-10 w-80 px-3 dark:bg-gray-600 dark:placeholder:text-amber-100 dark:text-amber-100"
+          />
+        </div>
+      </nav>
+      <!-- File drop -->
+      <div
+        class="w-full py-9 bg-gray-50 dark:bg-gray-800 rounded-2xl border border-gray-300 gap-3 grid border-dashed max-w-150"
+        id="drop-zone"
+      >
+        <div class="grid gap-1">
+          <img class="mx-auto" src="file-icon.svg" alt="ícono de archivos" />
+          <h2 class="text-center text-gray-400 text-xs leading-4">
+            Txt con el historial de Whatsapp exportado
+          </h2>
+        </div>
+        <div class="grid gap-2">
+          <h4
+            class="text-center text-gray-900 dark:text-amber-100 text-sm font-medium leading-snug"
+          >
+            Arrastrar el archivo aquí
+          </h4>
+          <div class="flex items-center justify-center">
+            <label>
+              <input
+                type="file"
+                id="file-input"
+                hidden
+                webkitdirectory
+                directory
+                multiple
+              />
+              <div
+                class="flex w-28 h-9 px-2 flex-col bg-indigo-600 rounded-full shadow-sm text-white text-xs font-semibold leading-4 items-center justify-center cursor-pointer focus:outline-hidden"
+              >
+                Elegir archivo
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- End filedrop -->
+    </header>
+    <div id="messages" class="p-10"></div>
+    <footer>
+      <button
+        id="btn-go-to-top"
+        class="fixed text-white p-2 right-3 bottom-3 hidden"
+      >
+        <img src="top.svg" alt="go to top button" class="w-15 cursor-pointer" />
+      </button>
+
+      <div
+        id="before-after"
+        class="dark:text-amber-100 flex-col fixed bottom-[40vh] right-5 hidden"
+      >
+        <button id="btn-before" class="cursor-pointer hover:brightness-115">
+          <img src="up.svg" alt="arriba" class="w-12" />
+        </button>
+        <button id="btn-after" class="cursor-pointer hover:brightness-115">
+          <img src="up.svg" alt="abajo" class="rotate-180 w-12" />
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>

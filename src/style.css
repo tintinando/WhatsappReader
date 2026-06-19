@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-500: #22c55e;
+  --color-brand-900: #14532d;
+
+  --color-accent-primary: #3b82f6;
+  --color-accent-secondary: #f59e0b;
+}
+
+.highlight {
+  background: #ccc;
+}
+
+.message-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.lazy-list-sentinel {
+  margin: 20px 0;
+}
+
+.item {
+  padding: 15px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: opacity 0.3s;
+}
+
+.message {
+  padding: 12px 16px;
+  margin: 8px 0;
+  max-width: 80%;
+  border-radius: 18px;
+  background-color: #f1f1f1;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+
+.author {
+  color: #007bff;
+}
+.time {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.message-content {
+  word-break: break-word;
+}
+
+.message-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.highlight-search {
+  background-color: #89ffd8;
+}
+
+.current-search {
+  background-color: #00ffaa;
+}
+
+@media (prefers-color-scheme: dark) {
+  .message {
+    background-color: #333;
+  }
+
+  .message-content {
+    color: white;
+  }
+}
